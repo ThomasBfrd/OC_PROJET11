@@ -1,0 +1,136 @@
+@use '../../styles/variables' as *;
+
+.main {
+  padding: 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.locations {
+  padding: 35px;
+  border-radius: 25px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: $background-main-accueil;
+
+  & .loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotate 1s linear infinite;
+
+    &::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid $color-text-red;
+      animation: prixClipFix 2s linear infinite;
+    }
+  }
+}
+
+.locations-prevent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locations-list {
+  list-style: none;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+  margin: 0 auto;
+}
+
+.error-locations-message {
+  color: $color-text-red;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .main {
+    max-width: 1280px;
+  }
+
+  .locations-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    max-width: 900px;
+    padding: 0rem 1.3rem 1rem 1.3rem;
+  }
+
+  .locations {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0 auto;
+  }
+
+  .locations-list {
+    max-width: 900px;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .main {
+    max-width: 520px;
+  }
+
+  .locations-list {
+    max-width: 520px;
+    width: 100%;
+  }
+}

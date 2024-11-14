@@ -1,0 +1,42 @@
+@use '../../styles/variables' as *;
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+    background-color: $background-footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    & .footer-logo {
+        width: 70px;
+        object-fit: cover;
+        overflow: hidden;
+        margin-top: 8px;
+    }
+
+    & .footer-text {
+        color: $color-text-content;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .footer {
+        height: 250px;
+        gap: 15px;
+    
+        & .footer-logo {
+            width: 120px;
+        }
+    
+        & .footer-text {
+            width: 120px;
+            text-align: center;
+        }
+    }
+}
