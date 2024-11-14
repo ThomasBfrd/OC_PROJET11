@@ -10,7 +10,7 @@ export default function About() {
   const [aboutContent, setAboutContent] = useState<Array<About>>([]);
 
   useEffect(() => {
-    fetch("/public/about.json")
+    fetch("/about.json")
       .then((response) => {
         if (!response.ok) throw new Error();
         return response.json();
