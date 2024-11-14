@@ -1,0 +1,21 @@
+@use '../../styles/variables' as *;
+
+.rating {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-top: -10px;
+    padding: 5px;
+  }
+
+.star-active {
+    filter: brightness(0) saturate(100%) invert(44%) sepia(48%) saturate(1793%) hue-rotate(329deg) brightness(111%) contrast(102%);
+  }
+
+@media screen and (max-width: 480px) {
+  .rating {
+    max-width: 480px;
+    margin-top: -30px;
+    transform: scale(0.7) translateX(-35px);
+  }
+}
