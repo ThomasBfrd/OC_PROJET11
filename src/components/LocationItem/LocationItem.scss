@@ -1,0 +1,58 @@
+@use '../../styles/variables' as *;
+
+.location-item {
+    height: 350px;
+    width: 350px;
+    display: flex;
+    align-items: end;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+
+    & .location-item-cover {
+        border-radius: 8px;
+        object-fit: cover;
+        object-position: 70% 50%;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
+    & .location-item-cover-mask {
+        background-color: rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease-in-out;
+        width: 350px;
+        height: 350px;
+        border-radius: 8px;
+        position: absolute;
+    }
+
+    & .location-item-text {
+        color: $color-text-content;
+        text-align: end;
+        margin: 0 0 15px 15px;
+        width: 50%;
+        font-weight: 600;
+        position: absolute;
+        text-wrap: balance;
+        text-align: left;
+    }
+}
+
+.location-item:hover .location-item-cover-mask {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 900px) {
+    .location-item {
+        height: 300px;
+        max-width: 900px;
+        width: 100%;
+
+        & .location-item-cover-mask {
+            height: 300px;
+            max-width: 900px;
+            width: 100%;
+        }
+    }
+}
