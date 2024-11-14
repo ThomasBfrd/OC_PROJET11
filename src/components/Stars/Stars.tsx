@@ -6,7 +6,7 @@ export default function Stars({stars, locationRate}: {stars: Array<number>, loca
       {stars.map((star, index) => (
         <li key={index}>
           <img
-            src="/public/star.png"
+            src="/star.png"
             alt={`${star}`}
             className={
               index <= Number(locationRate) - 1 ? "star-active" : ""
