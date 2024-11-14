@@ -53,7 +53,7 @@ export default function CollapseDetails({
       >
         <h3 className="collapse__header-title">{title}</h3>
         <img
-          src="/public/chevron.png"
+          src="chevron.png"
           alt="chevron"
           className={`
             ${isOpened ? "is-opening" : ""}

@@ -29,7 +29,7 @@ export default function About() {
     <div className="about__main">
       <div className="about__main__cover">
         <img
-          src="../../../public/Image source 2.png"
+          src="/cover-about.png"
           className="about__main__cover-img"
         />
       </div>
