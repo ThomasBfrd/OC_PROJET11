@@ -1,0 +1,76 @@
+@use '../../styles/variables' as *;
+
+.error-main {
+    height: 75.7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    margin: 0 auto;
+
+    & .error-title {
+        color: $color-text-red;
+        font-size: 12rem;
+    }
+    
+    & .error-message {
+        margin: 15px 0;
+        color: $color-text-red;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-align: center;
+        width: 80%;
+    }
+    
+    & .error-return {
+        margin-top: 50px;
+        position: relative;
+    
+        & .error-url {
+            font-style: none;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            color: $color-text-menu;
+    
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                background-color: black;
+                width: 0;
+                height: 1px;
+                transition: width 0.2s ease-in-out;
+            }
+        }
+    
+        &:hover .error-url::after {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .error-main {
+        height: 65vh;
+        padding-bottom: 0px;
+    
+        & .error-title {
+            font-size: 5rem;
+            padding-bottom: 80px;
+        }
+        
+        & .error-message {
+            font-size: 1.3rem;
+            text-align: center;
+            text-wrap: balance;
+            padding-bottom: 80px;
+        }
+        
+        & .error-return {
+            margin-top: 50px;
+        }
+    }
+  }
