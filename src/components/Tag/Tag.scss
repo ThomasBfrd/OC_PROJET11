@@ -1,0 +1,43 @@
+@use '../../styles/variables' as *;
+
+.tag__item {
+  background-color: $color-text-red;
+  padding: 5px 20px;
+  height: 30px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: white;
+
+  &-text {
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .tag__item {
+    padding: 5px 10px;
+    height: 30px;
+    width: 140px;
+
+    &-text {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tag__item {
+    padding: 5px 5px;
+    height: 30px;
+    width: 110px;
+
+    &-text {
+      font-size: 0.65rem;
+    }
+  }
+}
