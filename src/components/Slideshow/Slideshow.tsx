@@ -48,12 +48,12 @@ export default function Slideshow({ locationGallery }: { locationGallery: string
     </div>
     <div className={`location__slider__overlay ${animate ? 'change-picture' : ''}`}></div>
     <img
-      src="/public/arrow-left.png"
+      src="/arrow-left.png"
       className="location__slider__arrow-left"
       onClick={() => onPreviousPicture()}
     />
     <img
-      src="/public/arrow-right.png"
+      src="/arrow-right.png"
       className="location__slider__arrow-right"
       onClick={() => onNextPicture()}
     />

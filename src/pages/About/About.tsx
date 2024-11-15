@@ -10,7 +10,7 @@ export default function About() {
   const [aboutContent, setAboutContent] = useState<Array<About>>([]);
 
   useEffect(() => {
-    fetch("/public/about.json")
+    fetch("/about.json")
       .then((response) => {
         if (!response.ok) throw new Error();
         return response.json();
@@ -29,7 +29,7 @@ export default function About() {
     <div className="about__main">
       <div className="about__main__cover">
         <img
-          src="../../../public/Image source 2.png"
+          src="/cover-about.png"
           className="about__main__cover-img"
         />
       </div>

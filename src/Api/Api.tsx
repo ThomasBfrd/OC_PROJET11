@@ -14,7 +14,7 @@ export default function useGetLocations() {
 
   useEffect(() => {
     const getLocationsData = () => {
-      fetch("/public/logements.json")
+      fetch("/logements.json")
         .then((response: Response) => {
           if (!response.ok) {
             throw (new Error());
