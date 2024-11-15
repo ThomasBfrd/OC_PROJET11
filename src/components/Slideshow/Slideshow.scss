@@ -1,7 +1,7 @@
 @use "../../styles/variables.scss" as *;
 
 .location__slider {
-  height: 100%;
+  height: 450px;
   width: 100%;
   max-width: 1440px;
   position: relative;
@@ -27,7 +27,7 @@
     overflow: hidden;
     z-index: 0;
     width: 100%;
-    height: 100%;
+    height: 450px;
     position: absolute;
     margin: 0 auto;
     background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0));
@@ -58,7 +58,6 @@
   & .location__slider__slider-item {
     overflow: hidden;
     height: 500px;
-    // width: 1400px;
     width: 100%;
     border-radius: 20px;
     object-fit: cover;
