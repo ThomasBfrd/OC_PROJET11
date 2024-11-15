@@ -33,7 +33,7 @@ export default function Accueil() {
             </ul>
           ) : (
             <h2 className="error-locations-message">
-              Aucuns logements n'ont pu être récupérés
+              Aucuns logements n&apos;ont pu être récupérés
             </h2>
           )}
         </div>
