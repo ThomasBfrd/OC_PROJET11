@@ -30,6 +30,8 @@ export default function useGetLocations() {
     };
 
     getLocationsData();
+
+    return () => {};
   }, []);
 
   return data;
